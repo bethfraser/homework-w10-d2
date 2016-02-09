@@ -18,7 +18,7 @@ app.get('/weather', function(req, res) {
 });
 
 app.get('/weather/:city', function(request, response){
-  http.get('http://api.openweathermap.org/data/2.5/weather?q='+ request.params.city + '&APPID=1f8ba05ce1c3731b7d4f20eceddd4782', function(res){
+  http.get('http://api.openweathermap.org/data/2.5/weather?q='+ request.params.city + '&APPID=1f8ba05ce1c3731b7d4f20eceddd4782&units=metric', function(res){
       var body = "";
       res.on('data', function(d){
         body += d;
