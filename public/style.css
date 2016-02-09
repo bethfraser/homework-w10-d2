@@ -1,0 +1,20 @@
+.main {
+  text-align: center;
+  font-family: "Trebuchet MS";
+}
+
+input[type=text] {
+  font-size: 1em;
+  padding: 5px;
+  margin: 5px;
+  width: 300px;
+}
+
+input {
+  font-size: 1em;
+}
+
+
+label {
+  line-height: 2em;
+}
