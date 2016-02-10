@@ -32,7 +32,7 @@ window.onload = function(){
       var link = document.createElement('a');
       link.innerText = e;
       link.href = "http://localhost:3000/weather/" + e;
-      savedLocationsView.appendChild(link);
+      savedLocationsView.appendChild(link);  
     })
   }
 
@@ -56,7 +56,7 @@ window.onload = function(){
       }
     });
 }
-    // displayLocations();
+    displayLocations();
   }
   
   

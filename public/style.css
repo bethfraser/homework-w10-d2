@@ -18,3 +18,12 @@ input {
 label {
   line-height: 2em;
 }
+
+a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+ul {
+  padding: 0;
+}
