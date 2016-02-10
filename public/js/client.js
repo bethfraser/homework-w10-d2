@@ -26,12 +26,19 @@ window.onload = function(){
 
   var displayLocations = function(){
     savedLocationsView.innerHTML = "";
-    console.log(savedLocations);
     savedLocations.forEach(function(e, i){
-      console.log(e);
-      var link = document.createElement('a');
+      var link = document.createElement('button');
       link.innerText = e;
-      link.href = "http://localhost:3000/weather/" + e;
+      // link.href = "http://localhost:3000/weather/" + e;
+      link.onclick = function(){
+        var currentReport = new WeatherReport(e);
+
+        currentReport.get(function(){
+          var data = currentReport.data;
+          var weatherDisplay = "<h4>" + e + "</h4><img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'><br>Weather: " + data.weather[0].main + "<br>Temperature: " + data.main.temp + " C <br>";
+          weatherView.innerHTML = weatherDisplay;
+      })
+    }
       savedLocationsView.appendChild(link);  
     })
   }
